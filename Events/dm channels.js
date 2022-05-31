@@ -55,7 +55,6 @@ client.on('messageCreate', async message => {
       client.guilds.cache.get('935343999517081660').channels.create(`${message.author.tag}`).then(e => e.setParent('981133633530241034')
   )
          icollector.stop()
-    
   }
   
    if(interaction.customId === `no`){
