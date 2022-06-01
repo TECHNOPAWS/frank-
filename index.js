@@ -169,7 +169,7 @@ client.on("messageCreate", async message => {
 
 
   client.on("messageDelete", msg => {
-    if(msg.member.id === "964575822713331722") return;
+    if(msg.author.id === "964575822713331722") return;
   const dlt = new Discord.MessageEmbed()
   .setTitle('Message Deleted')
   .setDescription(`A [message](https://discord.com/channels/935343999517081660/${msg.channel.id}) has been deleted in ${msg.channel}`)
