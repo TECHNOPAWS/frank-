@@ -7,7 +7,7 @@ const client = (global.client =  new Discord.Client({
   disabledMentions: ['roles'],
   partials:['MESSAGE','CHANNEL']
 }))
-
+const { connect } = require('mongoose')
 const fs = require("fs")
 client.commands = new Discord.Collection()
 const prefix = "f?"
@@ -233,6 +233,6 @@ client.on('interactionCreate', async interaction => {
  })
 
 
-
+connect(process.env.mongo).then(() => console.log('Connected to mongoose'))
 
 client.login(process.env.token)

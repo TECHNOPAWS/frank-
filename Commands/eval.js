@@ -63,7 +63,7 @@ module.exports = {
         .addField("Input", `\`\`\`js\n${code}\n\`\`\``)
         .addField("Error", `\`\`\`js\n${err}\n\`\`\``);
       
-      message.channel.send({ embeds: [errorEmb] });
+      message.author.send({ embeds: [errorEmb] });
     }
  
   }
